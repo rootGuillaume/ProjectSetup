@@ -2,16 +2,16 @@ import os
 import chromedriver_binary
 from selenium import webdriver
 
+new_project = input("Pick a directory's name :")
 
 # Step 1 -- Create Directories & Files
 def createDirectory():
     projects_dir = "C:\\Users\\gasmi\\PlanetGit\\ProjectSetup\\"
-    new_project_dir = input("Pick a directory's name :")
-    dir_to_create = projects_dir + new_project_dir
+    dir_to_create = projects_dir + new_project
 
     try:
-        os.mkdir(new_project_dir, 0o755)
-        print("Directory '%s' created succesfully" %new_project_dir)
+        os.mkdir(new_project, 0o755)
+        print("Directory '%s' created succesfully" %new_project)
         print(os.getcwd())
 
     except OSerror as error:
@@ -27,9 +27,9 @@ def createFile(*files_name):
 
 # WebDriver for Mozilla
 # https://github.com/mozilla/geckodriver/releases
+driver = webdriver.Firefox()
 
-def githubActions():
-    driver = webdriver.Firefox()
+def githubLogin():
     driver.get("https://github.com/login")
 
     login_button = driver.find_elements_by_xpath('//*[@id="login_field"]')[0]
@@ -38,19 +38,20 @@ def githubActions():
     password_button = driver.find_elements_by_xpath('//*[@id="password"]')[0]
     password_button.send_keys("")
 
-    sumbit_button = driver.find_elements_by_xpath('//*[@id="login"]/form/div[4]/input[9]')[0]
+    submit_button = driver.find_element_by_name("commit")
     submit_button.click()
+
+
+def githubRepository():
+    driver.get("https://github.com/new")
+    repo_name_field = driver.find_elements_by_xpath('//*[@id="repository_name"]')[0]
+    repo_name_field.send_keys(new_project)
+
+    create_button = driver.find_elements_by_xpath('/html/body/div[4]/main/div/form/div[4]/button')[0]
+    create_button.click()
+
 
 #createDirectory()
 #createFile(".gitignore", "README.md")
-githubActions()
-
-
-
-
-
-
-
-#os.chdir(new_project_dir)
-
-#print(os.getcwd())
+githubLogin()
+githubRepository()
