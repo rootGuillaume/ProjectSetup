@@ -1,5 +1,3 @@
-def CreateFile(*files_name):
-    print("Mot :", files_name)
-    #os.open(files_name, "w")
+import os
 
-CreateFile("Hello", "World", "Helix")
+os.system('dir')
