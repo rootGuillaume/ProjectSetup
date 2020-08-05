@@ -2,9 +2,7 @@ import os
 import chromedriver_binary
 from selenium import webdriver
 
-
-
-# Execute functions and command lines
+# ======================= Functions =======================
 def createDirectory(dir):
     try:
         os.mkdir(dir, 0o755)
@@ -37,7 +35,7 @@ def githubAddRemote():
     os.system(remote_cmd_line)
 
 
-# Execute functions and command lines
+# ======================= Main =======================
 new_project = input("Project name :")
 print("### Project setup processing... Please wait ###")
 
@@ -56,7 +54,6 @@ githubRepository()
 githubAddRemote()
 createFile()
 
-print(os.chdir(path))
 #os.system('git add .')
 #os.system('git commit -m "initial commit"')
 #os.system('git push origin master')
