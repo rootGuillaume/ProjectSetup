@@ -1,4 +1,5 @@
 import os
+import sys
 import chromedriver_binary
 from selenium import webdriver
 
@@ -22,36 +23,31 @@ def createFile(*files_name):
     for file in files_name:
         open(file, "w")
 
-
 # Step 2 -- Github browser
-
-# WebDriver for Mozilla
-# https://github.com/mozilla/geckodriver/releases
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 
 def githubLogin():
     driver.get("https://github.com/login")
-
-    login_button = driver.find_elements_by_xpath('//*[@id="login_field"]')[0]
+    login_button = driver.find_element_by_id("login_field")
     login_button.send_keys("")
-
-    password_button = driver.find_elements_by_xpath('//*[@id="password"]')[0]
+    password_button = driver.find_element_by_id("password")
     password_button.send_keys("")
-
-    submit_button = driver.find_element_by_name("commit")
-    submit_button.click()
+    submit_button = driver.find_element_by_name("commit").click()
 
 
 def githubRepository():
     driver.get("https://github.com/new")
-    repo_name_field = driver.find_elements_by_xpath('//*[@id="repository_name"]')[0]
+    repo_name_field = driver.find_element_by_id("repository_name")
     repo_name_field.send_keys(new_project)
+    create_repo = driver.find_element_by_id("new_repository").submit()
 
-    create_button = driver.find_elements_by_xpath('/html/body/div[4]/main/div/form/div[4]/button')[0]
-    create_button.click()
-
+def githubAddRemote():
+    remote_cmd_line = driver.find_element_by_id("empty-setup-push-repo-echo").text
+    print(remote_cmd_line)
 
 #createDirectory()
 #createFile(".gitignore", "README.md")
+
 githubLogin()
 githubRepository()
+githubAddRemote()
