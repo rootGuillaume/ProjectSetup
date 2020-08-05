@@ -2,21 +2,21 @@ import os
 import chromedriver_binary
 from selenium import webdriver
 
+
+
 # Execute functions and command lines
-def createDirectory():
+def createDirectory(dir):
     try:
-        os.mkdir(new_project, 0o755)
-        print("Directory '%s' created succesfully" %new_project)
+        os.mkdir(dir, 0o755)
+        print("Directory '%s' created succesfully" %dir)
         os.system('git init')
     except FileExistsError:
-        print("!!! '%s' already exist !!!" %new_project)
+        print("!!! '%s' already exist !!!" %dir)
         new_project = input("Please, choose an other project name :")
 
-def createFile(*files_name):
-    #open(os.path.join(dir_to_create), files_name)
-    for file in files_name:
-        open(file, "w")
-        print(files_name, "created succesfully")
+def createFile():
+    open(os.path.join(path, "README.md"), "w")
+    open(os.path.join(path, ".gitignore"), "w")
 
 def githubLogin():
     driver.get("https://github.com/login")
@@ -44,17 +44,21 @@ print("### Project setup processing... Please wait ###")
 projects_dir = "C:\\Users\\gasmi\\PlanetGit\\ProjectSetup\\"
 dir_to_create = projects_dir + new_project
 
-createDirectory()
+cwd = os.getcwd()
+path = cwd + "\\" + new_project
+
+createDirectory(new_project)
 
 driver = webdriver.Chrome()
 
 githubLogin()
 githubRepository()
 githubAddRemote()
-createFile(".gitignore", "README.md")
+createFile()
 
-os.system('git add .')
-os.system('git commit -m "initial commit"')
-os.system('git push origin master')
+print(os.chdir(path))
+#os.system('git add .')
+#os.system('git commit -m "initial commit"')
+#os.system('git push origin master')
 
 print("### Process complete ###")
