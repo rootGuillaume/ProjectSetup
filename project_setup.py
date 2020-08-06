@@ -54,6 +54,18 @@ githubRepository()
 githubAddRemote()
 createFile()
 
+
+os.chdir(path)
+
+if os.getcwd() == path:
+    os.system('git add .')
+    os.system('git commit -m "initial commit"')
+    os.system('git push origin master')
+else:
+    print("ERROR PATH")
+    print(path)
+    print(os.getcwd())
+
 #os.system('git add .')
 #os.system('git commit -m "initial commit"')
 #os.system('git push origin master')
