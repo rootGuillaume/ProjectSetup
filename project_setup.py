@@ -36,7 +36,7 @@ def githubAddRemote():
 
 
 # ======================= Main =======================
-new_project = input("Project name :")
+new_project = str(sys.argv[1])
 print("### Project setup processing... Please wait ###")
 
 projects_dir = "C:\\Users\\gasmi\\PlanetGit\\ProjectSetup\\"
