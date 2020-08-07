@@ -19,7 +19,7 @@ def createFile():
 def githubLogin():
     driver.get("https://github.com/login")
     login_button = driver.find_element_by_id("login_field")
-    login_button.send_keys("rootGuillaume") # Login
+    login_button.send_keys("") # Login
     password_button = driver.find_element_by_id("password")
     password_button.send_keys("") # Password
     submit_button = driver.find_element_by_name("commit").click()
