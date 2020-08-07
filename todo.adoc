@@ -1,0 +1,15 @@
+TO DO
+=====
+
+To execute the bash script function, first do a **_source_** 'file_name'
+
+Bash Script :
+
+. Execute python script
+
+. Execute git commands
+
+
+Python Script :
+
+. Remove all bash commands
