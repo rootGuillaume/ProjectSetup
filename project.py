@@ -4,7 +4,7 @@ import selenium
 
 
 def new_project():
-    project = sys.argv[1]
+    project = str(sys.argv[1])
     print(project)
 
 if __name__ == '__main__':
