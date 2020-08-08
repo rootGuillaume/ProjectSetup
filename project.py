@@ -26,9 +26,6 @@ def new_project():
 
     project_url = "https://github.com/rootGuillaume/" + project
 
-    print("Pj url : ", project_url)
-    print("Browser : ", browser.current_url)
-
     while browser.current_url != project_url:
         continue
     else:
