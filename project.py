@@ -32,9 +32,7 @@ def new_project():
     while browser.current_url != project_url:
         continue
     else:
-        print("same")
-        print(browser.current_url)
-    #    browser.close()
+        browser.close()
 
 if __name__ == '__main__':
     new_project()
