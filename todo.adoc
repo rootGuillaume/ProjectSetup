@@ -10,6 +10,7 @@ Bash Script :
 
 . Execute git commands
 
+. First, test if repo already exist then mkdir project
 
 Python Script :
 ---------------
