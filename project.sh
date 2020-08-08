@@ -3,7 +3,7 @@ function project() {
   cd
   mkdir $1
   python3 /home/guillaume/Projects/ProjectSetup/project.py $1
-  cd $1
+  cd ./$1
   git init
   touch .gitignore
   touch README.md

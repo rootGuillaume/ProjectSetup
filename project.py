@@ -16,13 +16,15 @@ def new_project():
     login_submit = browser.find_element_by_name('commit')
     login_submit.submit()
 
-    time.sleep(1.5)
+    time.sleep(2)
 
     browser.get('https://github.com/new')
     repo_name = browser.find_element_by_id('repository_name')
     repo_name.send_keys(project)
     repo_submit = browser.find_element_by_id('new_repository')
     repo_submit.submit()
+
+    time.sleep(2)
 
     browser.close()
 
