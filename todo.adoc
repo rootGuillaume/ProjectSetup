@@ -4,6 +4,7 @@ TO DO
 To execute the bash script function, first do a **_source_** 'file_name'
 
 Bash Script :
+-------------
 
 . Execute python script
 
@@ -11,5 +12,28 @@ Bash Script :
 
 
 Python Script :
+---------------
 
 . Remove all bash commands
+
+Install :
+---------
+
+To execute firefox with python/selenium you need to install geckodriver :
+
+. Here : https://github.com/mozilla/geckodriver/releases/tag/v0.27.0
+
+. Then execute de following commands :
++
+[source, bash]
+----
+$ wget https://github.com/mozilla/geckodriver/releases/tag/v0.27.0-linux64.tar.gz
+geckodriver
+
+$ tar -xvzf geckodriver-v0.27.0-linux64.tar.gz
+geckodriver
+
+$ chmod +x geckodriver
+
+$ sudo mv geckodriver /usr/local/bin
+----
