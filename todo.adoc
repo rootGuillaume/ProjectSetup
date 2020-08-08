@@ -12,6 +12,8 @@ Bash Script :
 
 . First, test if repo already exist then mkdir project
 
+. Add github credentials
+
 Python Script :
 ---------------
 
