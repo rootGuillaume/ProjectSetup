@@ -24,9 +24,10 @@ def new_project():
     repo_submit = browser.find_element_by_id('new_repository')
     repo_submit.submit()
 
-    time.sleep(2)
+    project_url = "https://github.com/rootGuillaume/" + project
 
-    browser.close()
+    if browser.current_url == project_url:
+        browser.close()
 
 if __name__ == '__main__':
     new_project()
