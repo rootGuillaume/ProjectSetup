@@ -6,7 +6,6 @@ from selenium import webdriver
 
 def new_project():
     project = str(sys.argv[1])
-    os.mkdir(project)
     browser = webdriver.Firefox()
     browser.get('https://github.com/login')
 
@@ -24,6 +23,8 @@ def new_project():
     repo_name.send_keys(project)
     repo_submit = browser.find_element_by_id('new_repository')
     repo_submit.submit()
+
+    browser.close()
 
 if __name__ == '__main__':
     new_project()
