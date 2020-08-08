@@ -26,8 +26,15 @@ def new_project():
 
     project_url = "https://github.com/rootGuillaume/" + project
 
-    if browser.current_url == project_url:
-        browser.close()
+    print("Pj url : ", project_url)
+    print("Browser : ", browser.current_url)
+
+    while browser.current_url != project_url:
+        continue
+    else:
+        print("same")
+        print(browser.current_url)
+    #    browser.close()
 
 if __name__ == '__main__':
     new_project()
