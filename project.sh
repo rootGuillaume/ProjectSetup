@@ -9,6 +9,7 @@ function project() {
   touch README.md
   git add .
   git commit -m "first commit"
+  git remote add origin https://github.com/rootGuillaume/$1.git
   git push -u origin master
   echo "### Process complete ###"
 }
