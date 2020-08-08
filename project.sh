@@ -7,8 +7,8 @@ function project() {
   git init
   touch .gitignore
   touch README.md
-  #git add .
-  #git commit -m "first commit"
-  #git push -u origin master
+  git add .
+  git commit -m "first commit"
+  git push -u origin master
   echo "### Process complete ###"
 }
