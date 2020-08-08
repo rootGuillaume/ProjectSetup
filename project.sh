@@ -1,4 +1,5 @@
 function project() {
+  echo "### Running script... Please wait ###"
   cd
   python3 /home/guillaume/Projects/ProjectSetup/project.py $1
   cd $1
@@ -8,4 +9,5 @@ function project() {
   #git add .
   #git commit -m "first commit"
   #git push -u origin master
+  echo "### Process complete ###"
 }
