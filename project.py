@@ -16,9 +16,13 @@ def new_project():
     login_submit = browser.find_element_by_name('commit')
     login_submit.submit()
 
-    time.sleep(2)
+    newrepo_url = "https://github.com/new"
 
-    browser.get('https://github.com/new')
+    while browser.current_url != newrepo_url:
+        continue
+    else:
+        browser.get('https://github.com/new')
+
     repo_name = browser.find_element_by_id('repository_name')
     repo_name.send_keys(project)
     repo_submit = browser.find_element_by_id('new_repository')
