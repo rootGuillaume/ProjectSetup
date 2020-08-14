@@ -29,7 +29,7 @@ password_input.send_keys("password") # Line 16
 Then, update your GitHub account's url in **project.sh** with GitHub username.
 
 ```bash
-$ git remote add origin https://github.com/username/$1.git # Line 8
+$ git remote add origin https://github.com/repo/$1.git # Line 8
 ```
 
 
