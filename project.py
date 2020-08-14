@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import credentials
 from selenium import webdriver
 
 
@@ -10,9 +11,9 @@ def new_project():
     browser.get('https://github.com/login')
 
     login_input = browser.find_element_by_id('login_field')
-    login_input.send_keys("")
+    login_input.send_keys(credentials.username)
     password_input = browser.find_element_by_id('password')
-    password_input.send_keys("")
+    password_input.send_keys(credentials.password)
     login_submit = browser.find_element_by_name('commit')
     login_submit.submit()
 
