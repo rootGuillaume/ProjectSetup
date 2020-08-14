@@ -3,3 +3,4 @@ test.sh
 geckodriver.log
 todo.adoc
 credentials.py
+__pycache__/*

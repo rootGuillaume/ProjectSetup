@@ -17,9 +17,7 @@ def new_project():
     login_submit = browser.find_element_by_name('commit')
     login_submit.submit()
 
-    home_url = "https://github.com/"
-
-    while browser.current_url != home_url:
+    while browser.current_url != "https://github.com/":
         continue
     else:
         browser.get('https://github.com/new')
@@ -29,9 +27,7 @@ def new_project():
     repo_submit = browser.find_element_by_id('new_repository')
     repo_submit.submit()
 
-    project_url = "https://github.com/rootGuillaume/" + project
-
-    while browser.current_url != project_url:
+    while browser.current_url != "https://github.com/rootGuillaume/" + project:
         continue
     else:
         browser.close()
