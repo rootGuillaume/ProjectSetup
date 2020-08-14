@@ -8,6 +8,14 @@ You need to install [Selenium](https://selenium-python.readthedocs.io/) before r
 pip install selenium
 ```
 
+Now feel free to download the repository.
+
+```bash
+$ cd
+$ cd Downloads
+$ git clone https://github.com/rootGuillaume/ProjectSetup.git
+```
+
 ## Configuration
 
 First, you need to update **project.py** with your GitHub username and password.
@@ -21,5 +29,20 @@ password_input.send_keys("password") # Line 16
 Then, update your GitHub account's url in **project.sh** with GitHub username.
 
 ```bash
-$ git remote add origin https://github.com/username/$1.git
+$ git remote add origin https://github.com/username/$1.git # Line 8
+```
+
+
+## Execution
+
+The project setup use both project.sh bash script and project.py python script.
+
+The python script is running through the bash script.
+
+You have to _source_ the bash script to run **project** function wherever you want.
+
+```bash
+$ cd Downloads/ProjectSetup # Navigate to the project.sh folder
+
+$ source project.sh
 ```
