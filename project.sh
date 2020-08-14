@@ -5,13 +5,12 @@ function project() {
   python3 /home/guillaume/Projects/ProjectSetup/project.py $1
   cd ./$1
   git init
-  #git remote add origin https://github.com/rootGuillaume/$1.git
-  git remote add origin git@github.com:rootGuillaume/$1.git
+  git remote add origin https://github.com/rootGuillaume/$1.git
   touch README.md
   touch .gitignore
   git add .
   git commit -m "first commit"
-  git push -u origin master
+  git push origin master
   #atome
   echo "### Process complete ###"
 }
