@@ -2,3 +2,4 @@ test_setup.py
 test.sh
 geckodriver.log
 todo.adoc
+credentials.py
