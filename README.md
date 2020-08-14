@@ -1,6 +1,6 @@
 # GitHub Project Setup
 
-## Installation
+## Installation :inbox_tray:
 
 You need to install [Selenium](https://selenium-python.readthedocs.io/) before running "SCRIPT".
 
@@ -12,11 +12,11 @@ Now feel free to download the repository.
 
 ```bash
 $ cd
-$ cd Downloads
+$ cd Downloads/
 $ git clone https://github.com/rootGuillaume/ProjectSetup.git
 ```
 
-## Configuration
+## Configuration :wrench:
 
 First, you need to update **project.py** with your GitHub username and password.
 
@@ -33,7 +33,7 @@ $ git remote add origin https://github.com/username/$1.git # Line 8
 ```
 
 
-## Execution
+## Execution :computer:
 
 The project setup use both project.sh bash script and project.py python script.
 
@@ -42,7 +42,7 @@ The python script is running through the bash script.
 You have to _source_ the bash script to run **project** function wherever you want.
 
 ```bash
-$ cd Downloads/ProjectSetup # Navigate to the project.sh folder
+$ cd Downloads/ProjectSetup/ # Navigate to the project.sh folder
 
 $ source project.sh
 ```
