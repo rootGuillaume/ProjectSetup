@@ -18,6 +18,7 @@ $ tar -xvzf geckodriver-v0.27.0-linux64.tar.gz
 $ chmod +x geckodriver
 
 $ sudo mv geckodriver /usr/local/bin
+```
 
 Now feel free to download the repository.
 
@@ -28,7 +29,7 @@ $ cd Downloads/
 
 $ git clone https://github.com/rootGuillaume/ProjectSetup.git
 ```
-```
+
 
 
 ## Configuration :wrench:
