@@ -9,9 +9,9 @@ def new_project():
     browser.get('https://github.com/login')
 
     login_input = browser.find_element_by_id('login_field')
-    login_input.send_keys(credentials.username)
+    login_input.send_keys("### login ###")
     password_input = browser.find_element_by_id('password')
-    password_input.send_keys(credentials.password)
+    password_input.send_keys("### password ###")
     login_submit = browser.find_element_by_name('commit')
     login_submit.submit()
 
@@ -25,7 +25,7 @@ def new_project():
     repo_submit = browser.find_element_by_id('new_repository')
     repo_submit.submit()
 
-    while browser.current_url != "https://github.com/rootGuillaume/" + project:
+    while browser.current_url != "### https://github.com/rootGuillaume/ ###" + project:
         continue
     else:
         browser.close()
