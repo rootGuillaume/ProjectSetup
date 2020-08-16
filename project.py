@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 import os
 import sys
-import time
-import credentials
 from selenium import webdriver
 
 def new_project():
