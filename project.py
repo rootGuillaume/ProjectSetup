@@ -9,9 +9,9 @@ def new_project():
     browser.get('https://github.com/login')
 
     login_input = browser.find_element_by_id('login_field')
-    login_input.send_keys("### login ###")
+    login_input.send_keys("login")
     password_input = browser.find_element_by_id('password')
-    password_input.send_keys("### password ###")
+    password_input.send_keys("password")
     login_submit = browser.find_element_by_name('commit')
     login_submit.submit()
 
