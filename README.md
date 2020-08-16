@@ -38,7 +38,7 @@ First, you need to update **project.py** with your GitHub username and password.
 
 ```python
 login_input.send_keys("username") # Line 12
-U
+
 password_input.send_keys("password") # Line 14
 
 while browser.current_url != "https://github.com/username/" + project: # Line 28
@@ -89,3 +89,12 @@ $ sudo ln -s ~/scripts/project.py .
 ```
 
 Now the python script can be run anywhere you want to.
+
+
+## Create project :pencil2:
+
+Settings done we finally can create our github project. Open your terminal and run custom bash function.
+
+```bash
+$ project name_of_your_project
+```
