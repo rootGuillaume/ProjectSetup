@@ -16,6 +16,16 @@ $ cd Downloads/
 $ git clone https://github.com/rootGuillaume/ProjectSetup.git
 ```
 
+Then you need to install Firefox webdriver to run the browser. Open your terminal and run following commands.
+
+```bash
+$ wget https://github.com/mozilla/geckodriver/releases/tag/v0.27.0-linux64.tar.gz
+$ tar -xvzf geckodriver-v0.27.0-linux64.tar.gz
+$ chmod +x geckodriver
+$ sudo mv geckodriver /usr/local/bin
+```
+
+
 ## Configuration :wrench:
 
 First, you need to update **project.py** with your GitHub username and password.
