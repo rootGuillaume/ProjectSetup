@@ -11,6 +11,6 @@ function project() {
   git add .
   git commit -m "first commit"
   git push origin master
-  atome
+  #atom
   echo "### Process complete ###"
 }
