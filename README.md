@@ -9,7 +9,7 @@ You need to install [Selenium](https://selenium-python.readthedocs.io/) before r
 pip install selenium
 ```
 
-Then install Firefox webdriver to run the browser. Open your terminal and run following commands.
+Then install Firefox [geckodriver](https://github.com/mozilla/geckodriver/releases) to run the browser. Open your terminal and run following commands.
 
 ```bash
 $ wget https://github.com/mozilla/geckodriver/releases/tag/v0.27.0-linux64.tar.gz
@@ -56,9 +56,7 @@ $ git remote add origin https://github.com/repo/$1.git # Line 8
 ## Execution :computer:
 
 The project setup use both project.sh bash script and project.py python script.
-
 The python script is running through the bash script.
-
 You have to _source_ the bash script to run **project** function wherever you want.
 
 ```bash
