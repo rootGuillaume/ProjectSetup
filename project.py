@@ -6,14 +6,6 @@ import time
 import credentials
 from selenium import webdriver
 
-
-def wait_for_loading(url):
-    while browser.current_url != url:
-        continue
-    else:
-        browser.get(url)
-
-
 def new_project():
     project = str(sys.argv[1])
     browser = webdriver.Firefox()
@@ -40,6 +32,7 @@ def new_project():
         continue
     else:
         browser.close()
+
 
 if __name__ == '__main__':
     new_project()
