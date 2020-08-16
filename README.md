@@ -37,9 +37,11 @@ $ git clone https://github.com/rootGuillaume/ProjectSetup.git
 First, you need to update **project.py** with your GitHub username and password.
 
 ```python
-login_input.send_keys("username") # Line 14
+login_input.send_keys("username") # Line 12
 
-password_input.send_keys("password") # Line 16
+password_input.send_keys("password") # Line 14
+
+while browser.current_url != "https://github.com/username/" + project: # Line 28
 ```
 
 Then, update your GitHub account's url in **project.sh** with GitHub username.
