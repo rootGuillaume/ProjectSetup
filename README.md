@@ -1,5 +1,6 @@
 # GitHub Project Setup
 
+Creating a GitHub project, .gitignore or README.md file and pushing the first commit is always following the same procedure. In this case why should we keep going ? Let's automate this stuff ! :bulb:
 
 ## Installation :inbox_tray:
 
