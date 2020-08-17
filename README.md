@@ -60,9 +60,9 @@ The python script is running through the bash script.
 You have to _source_ the bash script to run **project** function wherever you want.
 
 ```bash
-$ cd Downloads/ProjectSetup/(Web)Project # Navigate to the project.sh folder
+$ cd Downloads/ProjectSetup/ # Navigate to the project.sh folder
 
-$ source (web)project.sh
+$ source project.sh
 ```
 
 Now the most important step is to make the python script runnable anywhere.
