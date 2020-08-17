@@ -60,9 +60,9 @@ The python script is running through the bash script.
 You have to _source_ the bash script to run **project** function wherever you want.
 
 ```bash
-$ cd Downloads/ProjectSetup/ # Navigate to the project.sh folder
+$ cd Downloads/ProjectSetup/(Web)Project # Navigate to the project.sh folder
 
-$ source project.sh
+$ source (web)project.sh
 ```
 
 Now the most important step is to make the python script runnable anywhere.
@@ -74,15 +74,15 @@ $ cd
 
 $ mkdir scripts
 
-$ mv Downloads/ProjectSetup/project.py ~/scripts
+$ mv Downloads/ProjectSetup/(Web)Project/(web)project.py ~/scripts
 
 $ cd ~/scripts
 
-$ chmod +x project.py
+$ chmod +x (web)project.py
 
 $ cd /usr/local/bin/
 
-$ sudo ln -s ~/scripts/project.py .
+$ sudo ln -s ~/scripts/(web)project.py .
 
 ```
 
