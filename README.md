@@ -74,15 +74,15 @@ $ cd
 
 $ mkdir scripts
 
-$ mv Downloads/ProjectSetup/(Web)Project/(web)project.py ~/scripts
+$ mv Downloads/ProjectSetup/project.py ~/scripts
 
 $ cd ~/scripts
 
-$ chmod +x (web)project.py
+$ chmod +x project.py
 
 $ cd /usr/local/bin/
 
-$ sudo ln -s ~/scripts/(web)project.py .
+$ sudo ln -s ~/scripts/project.py .
 
 ```
 
@@ -91,10 +91,10 @@ Now the python script can be run anywhere you want to.
 
 ## Create project :pencil2:
 
-Settings done we finally can create our github project. Open your terminal and run custom bash function.
+Settings done we finally can create our github project. Open your terminal and run one of both custom bash functions.
 
 ```bash
 $ project name_of_your_project
-# Or
+
 $ webproject name_of_your_project
 ```
