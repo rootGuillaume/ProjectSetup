@@ -2,7 +2,7 @@
 
 Creating a GitHub project, .gitignore or README.md file and pushing the first commit is always following the same procedure. In this case why should we keep going ? Let's automate this stuff ! :bulb:
 
-:pushpin: **The project is meant to be use for Linux distributions such as Ubuntu**
+:pushpin: **The project is meant to be use for Linux distributions such as Ubuntu.**
 
 
 ## Installation :inbox_tray:
@@ -10,7 +10,7 @@ Creating a GitHub project, .gitignore or README.md file and pushing the first co
 First, you need to install python [Selenium](https://selenium-python.readthedocs.io/) library.
 
 ```bash
-pip install selenium
+$ pip install selenium
 ```
 
 Then install Firefox [geckodriver](https://github.com/mozilla/geckodriver/releases) to run the browser. Open your terminal and run following commands.
@@ -102,3 +102,6 @@ $ project name_of_your_project
 
 $ webproject name_of_your_project
 ```
+##
+
+_V1.0.1 | Last Update : 08/17/20_
