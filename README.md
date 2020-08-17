@@ -2,9 +2,12 @@
 
 Creating a GitHub project, .gitignore or README.md file and pushing the first commit is always following the same procedure. In this case why should we keep going ? Let's automate this stuff ! :bulb:
 
+:pushpin: **The project is meant to be use for Linux distributions such as Ubuntu**
+
+
 ## Installation :inbox_tray:
 
-You need to install [Selenium](https://selenium-python.readthedocs.io/) before running "SCRIPT".
+First, you need to install python [Selenium](https://selenium-python.readthedocs.io/) library.
 
 ```bash
 pip install selenium
@@ -48,7 +51,7 @@ while browser.current_url != "https://github.com/username/" + project: # Line 28
 Then, update your GitHub account's url in **project.sh** with GitHub username.
 
 ```bash
-$ git remote add origin https://github.com/repo/$1.git # Line 8
+$ git remote add origin https://github.com/username/$1.git # Line 8
 ```
 
 
