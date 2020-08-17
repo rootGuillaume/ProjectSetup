@@ -95,4 +95,6 @@ Settings done we finally can create our github project. Open your terminal and r
 
 ```bash
 $ project name_of_your_project
+# Or
+$ webproject name_of_your_project
 ```
