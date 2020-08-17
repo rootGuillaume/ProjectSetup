@@ -1,4 +1,4 @@
-function project() {
+function webproject() {
   echo "### Running script... Please wait ###"
   cd
   mkdir $1
