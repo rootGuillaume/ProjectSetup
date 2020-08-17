@@ -9,14 +9,15 @@ function webproject() {
   git init
   git remote add origin https://github.com/rootGuillaume/$1.git
 
-  mkdir {css,fonts,img,js,components}
-
+  mkdir {css,fonts,img,js}
 
   touch README.md
   touch .gitignore
   touch index.html
-  touch /css/styles.css
-  touch /js/script.js 
+  touch css/styles.css
+  touch fonts/.keep
+  touch img/.keep
+  touch js/script.js 
 
   git add .
   git commit -m "first commit"
