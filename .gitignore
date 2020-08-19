@@ -1,3 +1,6 @@
 geckodriver.log
 credentials.py
 __pycache__/*
+creds.py
+test_project.py
+test_project.sh
