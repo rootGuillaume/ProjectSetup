@@ -5,7 +5,11 @@ from selenium import webdriver
 
 def new_project():
     project = str(sys.argv[1])
-    browser = webdriver.Firefox()
+
+    options = webdriver.FirefoxOptions()
+    options.add_argument('-headless')
+
+    browser = webdriver.Firefox(options=options)
     browser.get('https://github.com/login')
 
     login_input = browser.find_element_by_id('login_field')
