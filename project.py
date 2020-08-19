@@ -32,11 +32,11 @@ def new_project():
     repo_submit.submit()
     print("Creating repository...")
 
-    while browser.current_url != "### https://github.com/rootGuillaume/ ###" + project:
+    while browser.current_url != "https://github.com/username/" + project:
         continue
     else:
         browser.close()
-        print("Succesfully created")
+        print("Succesfully created.")
 
 
 if __name__ == '__main__':
