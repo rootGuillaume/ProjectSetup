@@ -13,7 +13,7 @@ function project() {
     cd ./$1
 
     git init
-    git remote add origin https://github.com/rootGuillaume/$1.git
+    git remote add origin https://github.com/username/$1.git
 
     touch README.md
     touch .gitignore
@@ -43,7 +43,7 @@ function webproject() {
     cd ./$1
 
     git init
-    git remote add origin https://github.com/rootGuillaume/$1.git
+    git remote add origin https://github.com/username/$1.git
 
     mkdir {css,fonts,img,js}
 
