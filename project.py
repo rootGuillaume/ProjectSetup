@@ -6,12 +6,14 @@ from selenium import webdriver
 def new_project():
     project = str(sys.argv[1])
 
+    # Running Firefox headless mode
     options = webdriver.FirefoxOptions()
     options.add_argument('-headless')
 
     browser = webdriver.Firefox(options=options)
     browser.get('https://github.com/login')
 
+    # Logging to github
     print("Attempt to connect to github...")
     login_input = browser.find_element_by_id('login_field')
     login_input.send_keys("login")
@@ -26,6 +28,7 @@ def new_project():
     else:
         browser.get('https://github.com/new')
 
+    # Repository creation
     repo_name = browser.find_element_by_id('repository_name')
     repo_name.send_keys(project)
     repo_submit = browser.find_element_by_id('new_repository')
