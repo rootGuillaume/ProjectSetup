@@ -5,22 +5,27 @@ function project() {
     echo "ERROR: Directory already exists."
     echo "Script stop running."
 
+  # Creating project folder and github repository
   else
     cd
     mkdir $1
     project.py $1
     cd ./$1
+
     git init
     git remote add origin https://github.com/rootGuillaume/$1.git
+
     touch README.md
     touch .gitignore
+
     git add .
     git commit -m "first commit"
     git push origin master
-    #atom
+
     echo "### Process complete ###"
   fi
 }
+
 
 
 function webproject() {
@@ -30,6 +35,7 @@ function webproject() {
     echo "ERROR: Directory already exists."
     echo "Script stop running."
 
+  # Creating project folder and github repository
   else
     cd
     mkdir $1
@@ -52,7 +58,6 @@ function webproject() {
     git add .
     git commit -m "first commit"
     git push origin master
-    #atom
 
     echo "### Process complete ###"
   fi
