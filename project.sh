@@ -26,28 +26,34 @@ function project() {
 function webproject() {
   echo "### Running script... Please wait ###"
 
-  cd
-  mkdir $1
-  project.py $1
-  cd ./$1
+  if [ -d $1 ]
+    echo "ERROR: Directory already exists."
+    echo "Script stop running."
 
-  git init
-  git remote add origin https://github.com/rootGuillaume/$1.git
+  else
+    cd
+    mkdir $1
+    project.py $1
+    cd ./$1
 
-  mkdir {css,fonts,img,js}
+    git init
+    git remote add origin https://github.com/rootGuillaume/$1.git
 
-  touch README.md
-  touch .gitignore
-  touch index.html
-  touch css/styles.css
-  touch fonts/.keep
-  touch img/.keep
-  touch js/script.js
+    mkdir {css,fonts,img,js}
 
-  git add .
-  git commit -m "first commit"
-  git push origin master
-  #atom
+    touch README.md
+    touch .gitignore
+    touch index.html
+    touch css/styles.css
+    touch fonts/.keep
+    touch img/.keep
+    touch js/script.js
 
-  echo "### Process complete ###"
+    git add .
+    git commit -m "first commit"
+    git push origin master
+    #atom
+
+    echo "### Process complete ###"
+  fi
 }
