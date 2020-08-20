@@ -41,17 +41,17 @@ $ git clone https://github.com/rootGuillaume/ProjectSetup.git
 First, you need to update **project.py** with your GitHub username and password.
 
 ```python
-login_input.send_keys("username") # Line 12
+login_input.send_keys("username") # Line 19
 
-password_input.send_keys("password") # Line 14
+password_input.send_keys("password") # Line 21
 
-while browser.current_url != "https://github.com/username/" + project: # Line 28
+while browser.current_url != "https://github.com/username/" + project: # Line 38
 ```
 
 Then, update your GitHub account's url in **project.sh** with GitHub username.
 
 ```bash
-$ git remote add origin https://github.com/username/$1.git # Line 8
+$ git remote add origin https://github.com/username/$1.git # Line 16 & 46
 ```
 
 
@@ -104,4 +104,4 @@ $ webproject name_of_your_project
 ```
 ##
 
-_V1.0.1 | Last Update : 08/17/20_
+_V1.1.1 | Last Update : 08/20/20_
