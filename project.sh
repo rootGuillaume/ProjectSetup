@@ -1,7 +1,7 @@
 function project() {
   echo "### Running script... Please wait ###"
 
-  if [ -d $1 ]
+  if [ -d $1 ];then
     echo "ERROR: Directory already exists."
     echo "Script stop running."
 
@@ -31,7 +31,7 @@ function project() {
 function webproject() {
   echo "### Running script... Please wait ###"
 
-  if [ -d $1 ]
+  if [ -d $1 ];then
     echo "ERROR: Directory already exists."
     echo "Script stop running."
 
