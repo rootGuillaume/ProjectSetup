@@ -85,12 +85,8 @@ function djangoproject () {
     touch .gitignore
     echo "venv/" >> .gitignore
 
-
-
-
-
-
-
+    python3 -m venv venv
+    source venv/bin/activate
 
 
     git add .
