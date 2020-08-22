@@ -66,5 +66,12 @@ function webproject() {
 
 
 function djangoproject () {
-  
+
+
+  if [ -d $1 ]; then
+    echo "ERROR: Directory already exists."
+    echo "Script stop running."
+  else
+
+  fi
 }
