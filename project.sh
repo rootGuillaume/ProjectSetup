@@ -81,6 +81,15 @@ function djangoproject () {
     git init
     git remote add origin https://github.com/username/$1.git
 
+    touch README.md
+    touch .gitignore
+
+    
+
+
+
+
+
 
 
     git add .
