@@ -78,6 +78,14 @@ function djangoproject () {
     project.py $1
     cd ./$1
 
-    
+    git init
+    git remote add origin https://github.com/username/$1.git
+
+
+
+    git add .
+    git commit -m "first commit"
+    git push origin maste
+
   fi
 }
