@@ -62,3 +62,9 @@ function webproject() {
     echo "### Process complete ###"
   fi
 }
+
+
+
+function djangoproject () {
+  
+}
