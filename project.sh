@@ -88,8 +88,10 @@ function djangoproject () {
     python3 -m venv venv
     source venv/bin/activate
 
+    echo "Installing Django..."
     pip install Django
     django-admin startproject $1
+    echo "Django installed."
 
     git add .
     git commit -m "first commit"
