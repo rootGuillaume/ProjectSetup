@@ -97,14 +97,12 @@ Now the python script can be run anywhere you want to.
 
 Settings done we finally can create our github project. Open your terminal and run one of both custom bash functions.
 
-. Project : .gitignore and README.md files.
-
-. Webproject : web folder structure (css/fonts/img/js), .gitignore and README.md files.
-
 ```bash
 $ project name_of_your_project
 
 $ webproject name_of_your_project
+
+$ djangoproject name_of_your_project
 ```
 ##
 
