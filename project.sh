@@ -87,8 +87,8 @@ function djangoproject () {
 
     python3 -m venv venv
     source venv/bin/activate
-
-
+    pip install Django
+    
     git add .
     git commit -m "first commit"
     git push origin maste
