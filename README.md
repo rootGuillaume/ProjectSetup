@@ -106,4 +106,4 @@ $ djangoproject name_of_your_project
 ```
 ##
 
-_V1.1.1 | Last Update : 08/20/20_
+_V1.2.1 | Last Update : 08/21/20_
