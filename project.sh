@@ -93,7 +93,7 @@ function djangoproject () {
 
     git add .
     git commit -m "first commit"
-    git push origin maste
+    git push origin master
 
     echo "### Process complete ###"
   fi
