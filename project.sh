@@ -83,8 +83,9 @@ function djangoproject () {
 
     touch README.md
     touch .gitignore
+    echo "venv/" >> .gitignore
 
-    
+
 
 
 
