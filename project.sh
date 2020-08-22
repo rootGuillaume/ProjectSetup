@@ -71,7 +71,13 @@ function djangoproject () {
   if [ -d $1 ]; then
     echo "ERROR: Directory already exists."
     echo "Script stop running."
-  else
 
+  else
+    cd
+    mkdir $1
+    project.py $1
+    cd ./$1
+
+    
   fi
 }
