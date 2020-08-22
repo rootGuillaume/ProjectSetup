@@ -66,7 +66,7 @@ function webproject() {
 
 
 function djangoproject () {
-
+  echo "### Running script... Please wait ###"
 
   if [ -d $1 ]; then
     echo "ERROR: Directory already exists."
@@ -87,5 +87,6 @@ function djangoproject () {
     git commit -m "first commit"
     git push origin maste
 
+    echo "### Process complete ###"
   fi
 }
