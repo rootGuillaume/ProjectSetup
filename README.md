@@ -32,7 +32,7 @@ $ cd
 
 $ cd Downloads/
 
-$ git clone https://github.com/rootGuillaume/ProjectSetup.git
+$ git clone https://github.com/rootGuillaume/project-setup.git
 ```
 
 
