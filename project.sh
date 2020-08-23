@@ -97,7 +97,8 @@ function djangoproject () {
 
     cd ./myproject/myproject
     cp settings.py template_settings.py
-
+    sed -i '23d' ./template_settings.py
+    sed -i '23iSECRET_KEY = ""' ./template_settings.py
     cd ../../
 
     git add .
