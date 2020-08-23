@@ -92,8 +92,13 @@ function djangoproject () {
 
     echo "Installing Django..."
     pip install Django
-    django-admin startproject $1
+    django-admin startproject $myproject
     echo "Django installed."
+
+    cd ./myproject/myproject
+    cp settings.py template_settings.py
+
+    cd ../../
 
     git add .
     git commit -m "first commit"
