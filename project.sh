@@ -85,7 +85,7 @@ function djangoproject () {
     touch .gitignore
     touch requirements.txt
     echo "venv/" >> .gitignore
-    echo "# Python libraries to install via pip" >> requirements.txt
+    echo "myproject/myproject/settings.py" >> .gitignore
 
     python3 -m venv venv
     source venv/bin/activate
