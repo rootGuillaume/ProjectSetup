@@ -95,6 +95,8 @@ function djangoproject () {
     django-admin startproject $myproject
     echo "Django installed."
 
+    echo pip freeze >> requirements.txt
+
     cd ./myproject/myproject
     cp settings.py template_settings.py
     sed -i '23d' ./template_settings.py
