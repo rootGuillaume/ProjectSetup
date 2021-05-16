@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
 from .tools import Webdriver
 from secrets import *
 
@@ -110,3 +111,30 @@ class GitHub:
         else:
             print("repo does not exist")
             return sys.exit(0)
+
+
+
+    # Get public repositories list
+    def list_repo():
+        repos = requests.get(f"https://github.com/{USERNAME}?tab=repositories")
+
+        # Get all repositories info
+        if repos.status_code == 200:
+
+            # Scraping repositories list
+            source = requests.get(f"https://github.com/{USERNAME}?tab=repositories")
+            soup = BeautifulSoup(source.text, "html.parser")
+
+            repos_list = soup.find(id="user-repositories-list")
+            repos_list = repos_list.find_all("li")
+
+            # Get all repositories informations
+            for count, li in enumerate(repos_list):
+                repo_name = li.find("a").text
+                repo_name = repo_name.replace(" ", "")
+                repo_name = repo_name.replace("\n", "")
+                repo_url = li.find("a")["href"]
+
+                print(f"[{count + 1}] [{repo_name}] [https://github.com/{USERNAME}/{repo_name}]")
+
+            return sys.exit(1)

@@ -3,10 +3,14 @@ from tools.github import GitHub
 
 
 action = sys.argv[1]
-name = sys.argv[2]
+#name = sys.argv[2]
 
-print(action, name)
+GitHub.list_repo()
 
+if action.lower() == "list":
+    GitHub.list_repo()
+
+"""
 # Create new repository
 if action.lower() == "create":
     GitHub.create_repo(name)
@@ -14,3 +18,4 @@ if action.lower() == "create":
 # Delete existing repository
 if action.lower() == "delete":
     GitHub.delete_repo(name)
+"""
