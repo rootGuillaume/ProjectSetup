@@ -1,4 +1,4 @@
 from tools.github import GitHub
 
 
-GitHub.create_repo("")
+GitHub.delete_repo("test")
