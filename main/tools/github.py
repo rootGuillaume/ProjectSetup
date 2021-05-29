@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 from .tools import Webdriver
 from secrets import *
@@ -39,12 +40,37 @@ class GitHub:
                 return sys.exit("Impossible de se connecter")
 
 
+    def private_repo(webdriver, name):
+
+        # Repository settings
+        browser = webdriver
+        browser.get(f'https://github.com/{USERNAME}/{name}/settings')
+
+        # Change Visbility
+        repo_visbility = webdriver.find_element_by_xpath('/html/body/div[4]/div/main/div[2]/div/div/div[2]/div/div[10]/ul/li[1]/div[1]/form/details/summary')
+        repo_visbility.click()
+
+        # Private radio button
+        repo_radio_private = webdriver.find_element_by_xpath('/html/body/div[4]/div/main/div[2]/div/div/div[2]/div/div[10]/ul/li[1]/div[1]/form/details/details-dialog/div[3]/div[2]/label/input')
+        repo_radio_private.click()
+
+        # Confirm with repo name
+        repo_confirm = webdriver.find_element_by_xpath('/html/body/div[4]/div/main/div[2]/div/div/div[2]/div/div[10]/ul/li[1]/div[1]/form/details/details-dialog/div[4]/p[2]/input')
+        repo_confirm.send_keys(f'{USERNAME}/{name}')
+
+        # Submit
+        repo_submit = WebDriverWait(browser, 4).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, '/html/body/div[4]/div/main/div[2]/div/div/div[2]/div/div[10]/ul/li[1]/div[1]/form/details/details-dialog/div[4]/div/button'))).click()
+
+
 
     # Function to create a new repository
-    def create_repo(name):
+    def create_repo(name, private):
 
         # Check if the repository already exists
         repo_exists = requests.get(f"https://github.com/{USERNAME}/{name}")
+
         if repo_exists.status_code == 200:
             print("repo already exists")
             return sys.exit(0)
@@ -68,10 +94,19 @@ class GitHub:
             # Wait for the repository to be create
             while browser.current_url != f"https://github.com/{USERNAME}/" + name:
                 continue
+
             else:
-                browser.close()
-                print("Succesfully created.")
-                return 1
+                # If private is true > change visibility
+                if private:
+                    GitHub.private_repo(browser, name)
+                    browser.close()
+                    print(f"Repository [https://github.com/{USERNAME}/{name}] [PRIVATE] Succesfully created.")
+
+                else:
+                    browser.close()
+                    print(f"Repository [https://github.com/{USERNAME}/{name}] [PUBLIC] Succesfully created.")
+
+            return 0
 
 
 
